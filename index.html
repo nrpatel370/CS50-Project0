@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Google Clone</title>
+        <link rel="stylesheet" href="./stylesheets/style.css">
+        <script>
+            function handleSubmit(event){
+                event.preventDefault();  
+                const query = document.getElementById("query").value;
+                const url =`https://www.google.com/search?q=${query}`
+                console.log(query, url)
+                window.location.href = url; 
+            }
+
+            function handleLucky(event) {
+                event.preventDefault(); 
+                const query = document.getElementById("query").value;
+                const url = `https://www.google.com/search?q=${(query)}&btnI=I`;
+                window.location.href = url;  
+            }
+
+        </script>
+    </head>
+    
+    <body>
+        <div class="navbar"> 
+            <ul>
+                <a href="images.html">Images</a>
+                <a href="advanced.html">Advanced Search</a>
+            </ul>
+        </div>
+        
+        <section>
+            <div class="logo">
+                <img src="./images/google_logo.svg" alt="logo of the word Google">
+            </div>
+            
+            <form>
+                <div class="search-bar">
+                    <img class = "mag-glass" src="./images/search.png">
+                    <input id="query" type="text"> 
+                </div>
+            
+            
+                <div class="submit-btns">
+                    <button type="submit" onclick="handleSubmit(event)" class="button0">Google Search</button>
+                    <button type="submit" onclick="handleLucky(event)"class="button1">I'm Feeling Lucky</button> 
+                </div>
+            </form>
+
+        </section>
+
+
+        
+    </body>
+
+</html>

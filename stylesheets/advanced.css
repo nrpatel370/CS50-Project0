@@ -1,0 +1,72 @@
+body{
+    margin: 0;
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+#head{
+    color: #d93025;
+    font-size: 1.3rem;
+    padding: 0px 0px 1rem 2rem;
+
+}
+
+.adv-content{
+    border-top: 1px solid gainsboro;
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    padding: 3rem;
+    gap: 1.2rem;
+}
+
+.input-ques{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.questions, .input-fields{
+    font-size: 13px;
+    display: flex;
+    flex-direction: column;
+}
+
+.questions{
+    gap: 1.9rem;
+    padding-top: 4px;
+}
+
+.input-fields{
+    gap: 1.1rem;
+}
+
+input{
+    width: 23rem;
+    height: 1.4rem;
+    border: 1px solid #d9d9d9;
+    border-top: 1px solid #c0c0c0;
+    border-radius: 1px;
+}
+
+.btn{
+    text-align: end;
+    width: 36.8rem;
+}
+
+.btn > button{
+    box-shadow: none;
+    background-color: #4d90fe;
+    border: 1px solid #3079ed;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+button:hover{
+    border: 1px solid black;
+    box-shadow: inset 1px -3px 0.2rem  rgb(0 0 0 / 10%);
+}
+

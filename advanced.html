@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Search</title>
+    <link rel="stylesheet" href="./stylesheets/advanced.css"/>
+    <script>
+        function handleSubmit(event){
+            event.preventDefault();  
+            const all = document.getElementById("all").value;
+            const exact = document.getElementById("exact").value;
+            const any = document.getElementById("any").value;
+            const none = document.getElementById("none").value;
+            const url =`https://www.google.com/search?as_q=${all}&as_epq=${exact}&as_oq=${any}&as_eq=${none}`;
+            window.location.href = url; 
+        }
+    </script>
+</head>
+
+<body>
+    <div style="text-align: end; padding: 15px 15px;">
+        <a href="index.html">Back to Home</a>  
+    </div>
+
+    <div >
+        <p id="head">Advanced Search</p>
+    </div>
+
+    <form>
+        <div class="adv-content">
+            <div>
+                <p1>Find pages with...</p1>
+            </div>
+            
+            <div class="input-ques">
+                <div class="questions">
+                    <p1>all these words:</p1>
+                    <p1>this exact word or phrase:</p1>
+                    <p1>any of these words:</p1>
+                    <p1>none of these words:</p1>
+                </div>
+
+                <div class="input-fields">
+                    <input type="text" id="all">
+                    <input type="text" id="exact">
+                    <input type="text" id="any">
+                    <input type="text" id="none">
+                </div>
+
+            </div>
+                
+        </div>
+
+        <div class="btn">
+            <button onclick="handleSubmit(event)" type="submit"><strong>Advanced Search</strong></button>
+        </div>
+    </form>
+
+</body>
+</html>
